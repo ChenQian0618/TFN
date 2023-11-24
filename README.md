@@ -1,4 +1,4 @@
-# Introduction of TFN
+# TFN
 
 
 This is the open code of the paper entitled **"TFN: An Interpretable Neural Network With Time Frequency Transform Embedded for Intelligent Fault Diagnosis"**.
@@ -11,17 +11,17 @@ The final version is published in Mechanical System and Signal Process (MSSP): [
 
 # Introduction of code files
 
-The core code of TFN is shown in `./Models/TFconvlayer.py` and `./Models/TFN.py`. **You can just read these two files if you only care about our implementation.**
+The core code of TFN is shown in `Models/TFconvlayer.py` and `Models/TFN.py`. **You can just read these two files if you only care about our implementation.**
 
-Besides, to help the beginers (I definately know the difficulty for a beginer to reproduce other people`s works), **I also provide a full pipeline** based on [DL-based-Intelligent-Diagnosis-Benchmark](https://github.com/ZhaoZhibin/DL-based-Intelligent-Diagnosis-Benchmark) to conduct the acurracy experiment on CWRU dataset. Specifically, I compare our models (TFN) with backbone models (CNN and Random-CNN), and other models (i.e., SincNet, WKN, W-CNN) are not included.
+Besides, to help the beginers (I definately know the difficulty for a beginer to reproduce other people`s works), **I also provide a full pipeline** based on [DL-based-Intelligent-Diagnosis-Benchmark](https://github.com/ZhaoZhibin/DL-based-Intelligent-Diagnosis-Benchmark) to conduct the acurracy experiment on CWRU dataset. Specifically, I compare our models (TFN) with backbone models (CNN and Random-CNN), while other models (i.e., SincNet, WKN, W-CNN) are not included.
 
 The repo structure is as follows:
-* `./checkpoint`: storage of training results
-* `./Datasets`: code of dataset preparation (CWRU included only)
-* `./Models`: code of models (Backbon-CNN, Random-CNN, TFN-STTF, TFN-Chirplet, TFN-Morlet included)
-* `./PostProcess`: A full pipeline to conduct the accuracy experiments on CWRU dataset, including `./PostProcess/TrainSequentially.py` (train models sequentially) and  `./PostProcess/Acc_statistic.py`: (statistic and plot the results)
-* `./utils`: basic functions
-* `./main.py`: the main file
+* `checkpoint`: storage of training results
+* `Datasets`: code of dataset preparation (CWRU included only)
+* `Models`: code of models (Backbon-CNN, Random-CNN, TFN-STTF, TFN-Chirplet, TFN-Morlet included)
+* `PostProcess`: A full pipeline to conduct the accuracy experiments on CWRU dataset, including `PostProcess/TrainSequentially.py` (train models sequentially) and  `PostProcess/Acc_statistic.py`: (statistic and plot the results)
+* `utils`: basic functions
+* `main.py`: the main file
 
 # How to run?
 
@@ -31,7 +31,7 @@ The repo structure is as follows:
 
 Download CWRU Dataset and organized as below:
 
-![](./document/CWRU.png)
+![](Figures/CWRU.png)
 
 
 ### Requirement:
@@ -41,27 +41,26 @@ numpy
 pandas
 matplotlib
 seaborn
-tqdm
-scikit-learn
 scipy
-opencv-python
+scikit-learn
 openpyxl
 ```
 
 ### Run single training:
 
-* download CWRU dataset
-* run the `./main.py`  ( for example:  `python train.py --model_name TFN_STTF --data_name CWRU --data_dir "/mnt/e/CWRU"` )
+* download CWRU dataset and set the dataset directory rightly in the `main.py`
+* run the `main.py`  ( for example:  `python main.py --data_dir <CWRU dir>` )
 
 
 ### Run the full pipeline of accuracy experiments:
-* run `./PostProcess/TrainSequentially.py` to train models sequentially (Result is located in `./checkpoint/Acc-CWRU`)
-* run `./PostProcess/Acc_statistic.py` to statistic and plot the results (Result is located in `./checkpoint/Acc-CWRU/postfiles`)
+* download CWRU dataset and set the dataset directory rightly in the `main.py`
+* run `PostProcess/TrainSequentially.py` to train models sequentially (Result is located in `checkpoint/Acc-CWRU`)
+* run `PostProcess/Acc_statistic.py` to statistic and plot the results (Result is located in `checkpoint/Acc-CWRU/postfiles`)
 
 
 The result is as follows:
 
-![](./document/2-TestAcc-withlegend.jpg)
+![](Figures/2-TestAcc-withlegend.jpg)
 
 # Citation
 Please cite our paper when you use our code: 
@@ -79,3 +78,4 @@ author = {Qian Chen and Xingjian Dong and Guowei Tu and Dong Wang and Changming 
 
 # Contact
 * chenqian2020@sjtu.edu.cn
+
