@@ -12,7 +12,7 @@ This is the open code of the paper entitled **"TFN: An Interpretable Neural Netw
 
 The core code of TFN is shown in `Models/TFconvlayer.py` and `Models/TFN.py`. **You can just read these two files if you only care about our implementation.**
 
-Besides, I definately know the difficulty for a beginer to reproduce other people`s works, to help the beginers, **I also provide a full pipeline** based on [DL-based-Intelligent-Diagnosis-Benchmark](https://github.com/ZhaoZhibin/DL-based-Intelligent-Diagnosis-Benchmark) to conduct the acurracy experiment on CWRU dataset. Specifically, I compare our models (TFN) with backbone models (CNN and Random-CNN), while other models (i.e., SincNet, WKN, W-CNN) are not included.
+Besides, I definately know the difficulty for a beginer to reproduce other people`s works, to help the beginers, **I also provide a full pipeline** based on [DL-based-Intelligent-Diagnosis-Benchmark](https://github.com/ZhaoZhibin/DL-based-Intelligent-Diagnosis-Benchmark) to conduct the acurracy experiment on CWRU dataset.
 
 The repo structure is organized as follows:
 * `checkpoint`: storage of training results
