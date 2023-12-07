@@ -84,5 +84,5 @@ author = {Qian Chen and Xingjian Dong and Guowei Tu and Dong Wang and Changming 
 ```
 
 # Contact
-* chenqian2020@sjtu.edu.cn
+* chenqian2020@sjtu.edu.cn & [Homepage of Qian Chen](https://chenqian0618.github.io/Homepage/).
 
