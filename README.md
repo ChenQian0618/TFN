@@ -8,7 +8,11 @@ This is the open code of the paper entitled **"TFN: An Interpretable Neural Netw
 * The preprint version is available on [Arxiv](https://arxiv.org/abs/2209.01992);
 * The final version is published in [Mechanical System and Signal Processing (MSSP)](https://www.sciencedirect.com/science/article/pii/S0888327023008609).
 
-# Repo structure
+### Notes
+
+* **(Dec 25, 2023)**: An extra-supplimentary material about the interpretability is added into `Doc/ExtraSupplimentaryMaterial.pptx`;
+
+## Repo structure
 
 The core code of TFN is shown in `Models/TFconvlayer.py` and `Models/TFN.py`. **You can just read these two files if you only care about our implementation.**
 
@@ -22,7 +26,7 @@ The repo structure is organized as follows:
 * `utils`: basic functions
 * **`main.py`**: the main file
 
-# How to run?
+## How to run?
 
 ### Dataset: 
 
@@ -30,7 +34,7 @@ The repo structure is organized as follows:
 
 Download the CWRU Dataset (organized as below):
 
-![](Figures/CWRU.png)
+![1](./Doc/Figures/CWRU.png)
 
 
 ### Requirement:
@@ -67,9 +71,9 @@ conda install pandas matplotlib seaborn scipy scikit-learn openpyxl
 
 The result of accuracy experiment on CWRU dataset is shown as follows:
 
-![](Figures/2-TestAcc-withlegend.jpg)
+![1](./Doc/Figures/2-TestAcc-withlegend.jpg)
 
-# Citation
+## Citation
 Please cite our paper when our code is helpful to you: 
 ```
 @article{CHEN2024110952,
@@ -83,6 +87,6 @@ author = {Qian Chen and Xingjian Dong and Guowei Tu and Dong Wang and Changming 
 }
 ```
 
-# Contact
+## Contact
 * chenqian2020@sjtu.edu.cn & [Homepage of Qian Chen](https://chenqian0618.github.io/Homepage/).
 
