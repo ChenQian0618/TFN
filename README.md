@@ -1,16 +1,16 @@
 # TFN
 
 
-This is the open code of the paper entitled **"TFN: An Interpretable Neural Network With Time Frequency Transform Embedded for Intelligent Fault Diagnosis"**.
+This is the open code of paper entitled **"TFN: An Interpretable Neural Network With Time Frequency Transform Embedded for Intelligent Fault Diagnosis"**.
 > Convolutional neural networks (CNNs) are widely used in fault diagnosis of mechanical systems due to their powerful feature extraction and classification capabilities. However, the CNN is a typical black-box model, and the mechanism of CNN's decision-making is not clear, which limits its application in high-reliability-required fault diagnosis scenarios. To tackle this issue,  we propose a novel interpretable neural network termed as time-frequency network (TFN), where the physically meaningful time-frequency transform (TFT) method is embedded into the traditional convolutional layer as a trainable preprocessing layer. This preprocessing layer named as time-frequency convolutional (TFconv) layer, is constrained by a well-designed kernel function to extract fault-related time-frequency information. It not only improves the diagnostic performance but also reveals the logical foundation of the CNN prediction in a frequency domain view. Different TFT methods correspond to different kernel functions of the TFconv layer. In this study, three typical TFT methods are considered to formulate the TFNs and their diagnostic effectiveness and interpretability are proved through three mechanical fault diagnosis experiments.  Experimental results also show that the proposed TFconv layer has outstanding advantages in convergence speed and few-shot scenarios, and can be easily generalized to other CNNs with different depths to improve their diagnostic performances.
 ---
 
 * The preprint version is available on [Arxiv](https://arxiv.org/abs/2209.01992);
-* The final version is published in [Mechanical System and Signal Processing (MSSP)](https://www.sciencedirect.com/science/article/pii/S0888327023008609).
+* The final version is published on [Mechanical System and Signal Processing (MSSP)](https://www.sciencedirect.com/science/article/pii/S0888327023008609).
 
 ### Notes
 
-* **(Dec 25, 2023)**: An extra-supplimentary material about the interpretability is added into `Doc/ExtraSupplimentaryMaterial.pptx`;
+* **(Dec 25, 2023)**: An extra-supplimentary material about the interpretability is added as `Doc/ExtraSupplimentaryMaterial.pptx`;
 
 ## Repo structure
 
