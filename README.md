@@ -5,12 +5,12 @@ This is the open code of paper entitled **"TFN: An Interpretable Neural Network 
 > Convolutional neural networks (CNNs) are widely used in fault diagnosis of mechanical systems due to their powerful feature extraction and classification capabilities. However, the CNN is a typical black-box model, and the mechanism of CNN's decision-making is not clear, which limits its application in high-reliability-required fault diagnosis scenarios. To tackle this issue,  we propose a novel interpretable neural network termed as time-frequency network (TFN), where the physically meaningful time-frequency transform (TFT) method is embedded into the traditional convolutional layer as a trainable preprocessing layer. This preprocessing layer named as time-frequency convolutional (TFconv) layer, is constrained by a well-designed kernel function to extract fault-related time-frequency information. It not only improves the diagnostic performance but also reveals the logical foundation of the CNN prediction in a frequency domain view. Different TFT methods correspond to different kernel functions of the TFconv layer. In this study, three typical TFT methods are considered to formulate the TFNs and their diagnostic effectiveness and interpretability are proved through three mechanical fault diagnosis experiments.  Experimental results also show that the proposed TFconv layer has outstanding advantages in convergence speed and few-shot scenarios, and can be easily generalized to other CNNs with different depths to improve their diagnostic performances.
 ---
 
-* The preprint version is available on [Arxiv](https://arxiv.org/abs/2209.01992);
-* The final version is published on [Mechanical System and Signal Processing (MSSP)](https://www.sciencedirect.com/science/article/pii/S0888327023008609).
-
 ### Notes
 
-* **(Dec 25, 2023)**: An extra-supplimentary material about the interpretability is added as `Doc/ExtraSupplimentaryMaterial.pptx`;
+* **(Dec 25, 2023)** An extra-supplimentary material about the interpretability is added as `Doc/ExtraSupplimentaryMaterial.pptx`;
+* **(Nov 14, 2023)** The final version is published on [Mechanical System and Signal Processing (MSSP)](https://www.sciencedirect.com/science/article/pii/S0888327023008609);
+* **(Jun 19, 2023)** The preprint version is available on [Arxiv](https://arxiv.org/abs/2209.01992);
+
 
 ## Repo structure
 
@@ -19,23 +19,32 @@ The core code of TFN is shown in `Models/TFconvlayer.py` and `Models/TFN.py`. **
 Besides, I definately know the difficulty for a beginer to reproduce other people`s works, to help the beginers, **I also provide a full pipeline** based on [DL-based-Intelligent-Diagnosis-Benchmark](https://github.com/ZhaoZhibin/DL-based-Intelligent-Diagnosis-Benchmark) to conduct the acurracy experiment on CWRU dataset.
 
 The repo structure is organized as follows:
-* `checkpoint`: storage of training results
-* `Datasets`: code of dataset preparation (CWRU included only)
-* `Models`: code of models (Backbon-CNN, Random-CNN, TFN-STTF, TFN-Chirplet, TFN-Morlet included)
-* `PostProcess`: A full pipeline to conduct the accuracy experiments on CWRU dataset, including **`PostProcess/TrainSequentially.py`** (train models sequentially) and  **`PostProcess/Acc_statistic.py`**: (statistic and plot the results)
-* `utils`: basic functions
-* **`main.py`**: the main file
+* `checkpoint`: storage of training results;
+* `Datasets`: code of dataset preparation (CWRU included only);
+* `Models`: code of models (Backbon-CNN, Random-CNN, TFN-STTF, TFN-Chirplet, TFN-Morlet included);
+* `PostProcess`: A full pipeline to conduct the accuracy experiments on CWRU dataset, including **`PostProcess/TrainSequentially.py`** (train models sequentially) and  **`PostProcess/Acc_statistic.py`**: (statistic and plot the results);
+* `utils`: basic functions;
+* **`main.py`**: the main file.
 
 ## How to run?
 
 ### Dataset: 
 
-[CWRU Bearing Dataset](https://csegroups.case.edu/bearingdatacenter/pages/download-data-file/) (Ps: The official CWRU dataset website got something wrong, but it's not difficult to obtain this dataset from other resource.)
+* Official website: [Download a Data File | Case School of Engineering](https://engineering.case.edu/bearingdatacenter/download-data-file);
+* My personal link:  
+  * **Baidu NetDisk**：[CWRU-Bearing-Dataset.zip](https://pan.baidu.com/s/1Q7vXZi3BG6205nzKO57scg?pwd=riah) - (Code: riah);
+  * **Kuake NetDisk**: [CWRU-Bearing-Dataset.zip](https://pan.quark.cn/s/7334676ce5be).
 
-Download the CWRU Dataset (organized as below):
 
-![1](./Doc/Figures/CWRU.png)
+Download the CWRU Dataset and organize as below:
 
+```
+├── 12k Drive End Bearing Fault Data
+├── 12k Fan End Bearing Fault Data
+├── 48k DE fault data and normal baseline data
+├── 48k Drive End Bearing Fault Data
+└── Normal Baseline Data
+```
 
 ### Requirement:
 ```
@@ -74,7 +83,7 @@ The result of accuracy experiment on CWRU dataset is shown as follows:
 ![1](./Doc/Figures/2-TestAcc-withlegend.jpg)
 
 ## Citation
-Please cite our paper when our code is helpful to you: 
+Please cite our paper if our work is helpful to you: 
 ```
 @article{CHEN2024110952,
 title = {TFN: An interpretable neural network with time-frequency transform embedded for intelligent fault diagnosis},

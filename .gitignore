@@ -1,2 +1,7 @@
 #忽略notes.md
 /notes.md
+
+__pycache__
+/.idea
+
+checkpoint/
