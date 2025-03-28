@@ -7,7 +7,7 @@ This is the open code of paper entitled **"TFN: An Interpretable Neural Network 
 
 ### Notes
 
-* **(Dec 25, 2023)** An extra-supplimentary material about the interpretability is added as `Doc/ExtraSupplimentaryMaterial.pptx`;
+* **(Dec 25, 2023)** An extra-supplimentary material about the interpretability is added in `./Doc` directory: [SupplimentaryMaterial.pptx](./Doc/ExtraSupplimentaryMaterial.pptx) (Highly recommended to read);
 * **(Nov 14, 2023)** The final version is published on [Mechanical System and Signal Processing (MSSP)](https://www.sciencedirect.com/science/article/pii/S0888327023008609);
 * **(Jun 19, 2023)** The preprint version is available on [Arxiv](https://arxiv.org/abs/2209.01992);
 
